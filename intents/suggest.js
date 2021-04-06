@@ -15,7 +15,7 @@ module.exports = async (user, entities, resolve) => {
 		if (track) {
 			console.log(track)
 			
-			const res = await axios.get('http://51.15.206.54', { params: { uri: track.uri } });
+			const res = await axios.get('http://51.15.206.54', { params: { name: track.name, artist: track.artists[0].name } });
 			let ids = res?.data?.map(uri => uri.replace('spotify:track:', ''))
 			
 			if (ids && ids.length > 0) {
