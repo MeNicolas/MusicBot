@@ -25,7 +25,7 @@ module.exports = async (user, entities, resolve) => {
 				resolve({
 					txts: [
 						`Here are similar music to ${track.name} - ${track.artists[0].name}`,
-						tracks.map(t => `${t.name} - ${t.artists[0].name}`).join(', ')
+						tracks.map(t => `${t.name} - ${t.artists[0].name}`).join('\\n')
 					]
 				})
 			} else {
