@@ -10,7 +10,7 @@ module.exports = class User {
 		this.doc = doc
 		
 		this.api = new SpotifyWebApi({
-		  redirectUri: 'https://98a8b1563207.ngrok.io/spotify/callback',
+		  redirectUri: 'https://nicod-musicbot.herokuapp.com/spotify/callback',
 		  clientId: config.spotify.clientId,
 		  clientSecret: config.spotify.clientSecret
 		})
